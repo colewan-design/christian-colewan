@@ -1,5 +1,15 @@
 <template>
-  <v-app>
+  <v-app :theme="selectedTheme">
+    <v-container class="d-flex justify-end py-4">
+      <!-- Theme Switch -->
+      <v-btn variant="text" size="small" @click="toggleTheme">
+        <v-icon>
+          {{ selectedTheme === 'light' ? 'mdi-white-balance-sunny' : 'mdi-moon-waning-crescent' }}
+        </v-icon>
+        {{ selectedTheme === 'light' ? 'Light' : 'Dark' }}
+      </v-btn>
+
+    </v-container>
     <v-container class="d-flex justify-center">
       <v-col cols="12" md="10" lg="8">
         <!-- Page Title -->
@@ -105,6 +115,7 @@ import { salaryMatrix } from "@/assets/salary_matrix";
 export default {
   data() {
     return {
+      selectedTheme: localStorage.getItem("theme") || "light",
       isLoading: false,
       positions: [],
       search: "",
@@ -124,6 +135,10 @@ export default {
   },
 
   methods: {
+    toggleTheme() {
+      this.selectedTheme = this.selectedTheme === "light" ? "dark" : "light";
+      localStorage.setItem("theme", this.selectedTheme);
+    },
     getSalaryByGradeStep(grade, step = 1) {
       return salaryMatrix[grade]?.[step - 1] || null;
     },
