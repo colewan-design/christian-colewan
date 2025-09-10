@@ -10,6 +10,11 @@ export default defineConfig({
     vue(),
     vuetify({ autoImport: true })
   ],
+  build: {
+    rollupOptions: {
+      external: ['@mdi/font']
+    }
+  },
   server: {
     fs: {
       allow: ['..'],
