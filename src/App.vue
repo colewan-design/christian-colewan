@@ -24,9 +24,9 @@
 
 
         <!-- Data Table Card -->
-        <v-card elevation="2" class="rounded-lg">
+        <v-card elevation="4" class="rounded-lg">
           <v-data-table-virtual :headers="positionHeaders" :items="paginatedPositions" height="700" hover fixed-header
-            :loading="isLoading" class="elevation-0">
+            :loading="isLoading" class="elevation-0 flag-background">
             <template v-slot:item.salary_amount="{ item }">
               <span class="font-medium text-success">{{ formatCurrency(item.salary_amount) }}</span>
             </template>
@@ -64,7 +64,24 @@
 
 </template>
 
-<style scoped>
+<style>
+.flag-background {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+  /* create stacking context */
+}
+
+.flag-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/Flag.svg") no-repeat center/cover;
+  opacity: 0.1;
+  z-index: -1;
+  /* sit behind content */
+}
+
 .text-gray-500 {
   color: #6b7280;
   /* Tailwind gray-500 equivalent for subtle text */
