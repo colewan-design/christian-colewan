@@ -4,16 +4,24 @@
       <v-col cols="12" md="10" lg="8">
         <!-- Page Title -->
         <v-row class="mb-6" align="center" justify="space-between">
-          <v-col cols="12" md="6">
-            <h1 class="text-h4 font-medium">Government Plantilla Positions</h1>
-            <p class="text-subtitle-1 text-gray-600">Browse and search all available positions with salary info.</p>
+          <!-- Logo + Title -->
+          <v-col cols="12" md="6" class="d-flex align-center">
+            <v-img src="/Colewan Logo.svg" alt="Logo" max-width="60" class="mr-4"></v-img>
+            <div>
+              <h1 class="text-h4 font-medium">Government Plantilla Positions</h1>
+              <p class="text-subtitle-1 text-gray-600">
+                Browse and search all available positions with salary info.
+              </p>
+            </div>
           </v-col>
 
+          <!-- Search bar -->
           <v-col cols="12" md="4">
             <v-text-field v-model="search" label="Search Positions" variant="outlined" class="rounded-xl"
               prepend-inner-icon="mdi-magnify"></v-text-field>
           </v-col>
         </v-row>
+
 
         <!-- Data Table Card -->
         <v-card elevation="2" class="rounded-lg">
