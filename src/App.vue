@@ -25,7 +25,7 @@
 
         <!-- Data Table Card -->
         <v-card elevation="4" class="rounded-lg">
-          <v-data-table-virtual :headers="positionHeaders" :items="paginatedPositions" height="700" hover fixed-header
+          <v-data-table-virtual :headers="positionHeaders" :items="paginatedPositions" :height="600" hover fixed-header
             :loading="isLoading" class="elevation-0 flag-background">
             <template v-slot:item.salary_amount="{ item }">
               <span class="font-medium text-success">{{ formatCurrency(item.salary_amount) }}</span>
@@ -67,7 +67,6 @@
 <style>
 .flag-background {
   position: relative;
-  min-height: 100vh;
   z-index: 0;
   /* create stacking context */
 }
@@ -113,7 +112,6 @@ export default {
       perPage: 50,
 
       positionHeaders: [
-        { title: "ID", value: "id", sortable: true },
         { title: "Government Plantilla Items", value: "position_name", sortable: true },
         { title: "Salary Grade", value: "salary_grade", sortable: true },
         { title: "Salary Amount", value: "salary_amount", sortable: false },
