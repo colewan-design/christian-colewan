@@ -16,7 +16,7 @@
         <v-row class="mb-6" align="center" justify="space-between">
           <!-- Logo + Title -->
           <v-col cols="12" md="6" class="d-flex align-center">
-            <v-img src="/Colewan Logo.svg" alt="Logo" max-width="60" class="mr-4"></v-img>
+            <v-img src="/Colewan Logo.svg" alt="Logo" max-width="60" class="mr-4 rounded-circle"></v-img>
             <div>
               <h1 class="text-h4 font-medium">Government Plantilla Positions</h1>
               <p class="text-subtitle-1 text-gray-600">
@@ -28,17 +28,16 @@
           <!-- Search bar -->
           <v-col cols="12" md="4">
             <v-text-field v-model="search" label="Search Positions" variant="outlined" class="rounded-xl"
-              prepend-inner-icon="mdi-magnify"></v-text-field>
+              prepend-inner-icon="mdi-magnify" density="comfortable" color="primary"></v-text-field>
           </v-col>
         </v-row>
-
 
         <!-- Data Table Card -->
         <v-card elevation="4" class="rounded-lg">
           <v-data-table-virtual :headers="positionHeaders" :items="paginatedPositions" :height="600" hover fixed-header
             :loading="isLoading" class="elevation-0 flag-background">
             <template v-slot:item.salary_amount="{ item }">
-              <span class="font-medium text-success">{{ formatCurrency(item.salary_amount) }}</span>
+              <span class="font-weight-bold text-teal-darken-3">{{ formatCurrency(item.salary_amount) }}</span>
             </template>
 
             <template v-slot:no-data>
