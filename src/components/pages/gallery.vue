@@ -47,8 +47,8 @@ export default {
                     description:
                         "Browse and manage government plantilla positions with salary details.",
                     image: "/plantilla-positions.png",
-                    preview: "https://government-plantilla-positions.netlify.app/",
-                    link: "/plantilla-positions",
+                    preview: "https://government-plantilla-positions.netlify.app/plantilla-positions",
+                    link: "https://government-plantilla-positions.netlify.app/plantilla-positions",
                 },
                 {
                     title: "Eishi Partners Website",
