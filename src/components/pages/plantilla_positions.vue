@@ -20,6 +20,10 @@
                         prepend-inner-icon="mdi-magnify" density="comfortable" color="primary" />
                 </v-col>
             </v-row>
+            <v-col class="text-right">
+                <v-btn variant="text" class="text-decoration-underline" to="/salary-matrix" color="primary">View Salary
+                    Matrix</v-btn>
+            </v-col>
 
             <!-- Data Table -->
             <v-card elevation="4" class="rounded-lg">
