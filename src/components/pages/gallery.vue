@@ -1,6 +1,6 @@
 <template>
     <v-container class="py-12">
-        <h2 class="text-h4 font-weight-bold mb-8 text-center">
+        <h2 class="text-h3 font-weight-bold mb-4 text-center">
             Featured Projects
         </h2>
 
@@ -24,8 +24,9 @@
                         {{ project.description }}
                     </v-card-text>
                     <v-card-actions>
-                        <v-btn color="primary" variant="flat" size="small" :href="project.link" target="_blank">
-                            View
+                        <v-btn v-if="project.preview" rounded color="primary" variant="flat" size="small"
+                            :href="project.link" target="_blank">
+                            View Online
                         </v-btn>
                     </v-card-actions>
                 </v-card>
@@ -45,7 +46,7 @@ export default {
                     title: "Plantilla Positions",
                     subtitle: "Vue + Vuetify",
                     description:
-                        "Browse and manage government plantilla positions with salary details.",
+                        "Browse and manage government plantilla positions with salary details. It is based on the salary matrix for 2025.",
                     image: "/plantilla-positions.png",
                     preview: "https://christian-colewan.netlify.app/plantilla-positions",
                     link: "/plantilla-positions",
@@ -63,7 +64,7 @@ export default {
                     title: "BSU Payroll System",
                     subtitle: "Laravel 11 + Vue 3 + Vuetify 3 + Vite",
                     description:
-                        "Backend service for real-time payroll processing and reporting.",
+                        "Backend service for real-time payroll processing and reporting. It has an admin and user dashboard.",
                     image: "/payroll-system.png",
                     link: "#",
                 },

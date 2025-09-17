@@ -49,6 +49,43 @@
                     </v-col>
                 </v-row>
 
+
+                <!-- Experience Timeline -->
+                <div class="mt-16">
+                    <h2 class="text-h5 font-weight-bold mb-6">Experience Timeline</h2>
+                    <v-timeline align="start">
+                        <v-timeline-item dot-color="primary" size="small">
+                            <template #opposite>2023 - Present</template>
+                            <v-card elevation="2" class="pa-4 rounded-lg">
+                                <h3 class="text-h6 font-weight-bold mb-2">Information Systems Analyst I</h3>
+                                <p class="text-body-2 text-grey-darken-1 mb-0">
+                                    Leading full-stack projects with Laravel 11, Vue 3, and Vuetify.
+                                </p>
+                            </v-card>
+                        </v-timeline-item>
+
+                        <v-timeline-item dot-color="teal" size="small">
+                            <template #opposite>2022 - 2023</template>
+                            <v-card elevation="2" class="pa-4 rounded-lg">
+                                <h3 class="text-h6 font-weight-bold mb-2">Project-Based Developer</h3>
+                                <p class="text-body-2 text-grey-darken-1 mb-0">
+                                    Built Inventory System with Laravel and Vue 3.
+                                </p>
+                            </v-card>
+                        </v-timeline-item>
+
+                        <v-timeline-item dot-color="orange" size="small">
+                            <template #opposite>2021 - 2022</template>
+                            <v-card elevation="2" class="pa-4 rounded-lg">
+                                <h3 class="text-h6 font-weight-bold mb-2">Freelance Web Developer</h3>
+                                <p class="text-body-2 text-grey-darken-1 mb-0">
+                                    Built Student Projects
+                                </p>
+                            </v-card>
+                        </v-timeline-item>
+                    </v-timeline>
+                </div>
+
                 <!-- Call to Action -->
                 <div class="mt-12">
                     <v-btn color="primary" size="large" rounded="xl" to="/projects-gallery">

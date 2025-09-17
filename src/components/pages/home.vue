@@ -15,8 +15,8 @@
         </p>
 
         <!-- Call to Action -->
-        <v-btn color="primary" size="x-large" class="px-10 py-4" rounded="xl" to="/projects-gallery" elevation="3">
-            View Projects
+        <v-btn color="primary" size="x-large" class="px-10 py-4" rounded="xl" to="/about" elevation="3">
+            About
         </v-btn>
     </v-container>
 </template>
